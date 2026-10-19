@@ -19,17 +19,8 @@ In the repository settings, open **Pages** and set **Build and deployment** >
 client-side routes continue to work when opened directly or refreshed.
 
 The custom domain `shivaenggworks.com` is configured in GitHub Pages and declared
-in `public/CNAME`. At your DNS provider, point the apex (`@`) to GitHub Pages with
-these `A` records:
-
-```text
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-```
-
-Optionally point `www` to `vverma01232.github.io` with a `CNAME` record. Keep
-existing mail-related `MX` and `TXT` records unchanged. Once DNS has propagated
-and GitHub finishes its DNS check, enable **Enforce HTTPS** in the repository's
-Pages settings.
+in `public/CNAME`. Configure the apex (`@`) DNS record(s) with your DNS provider
+to point to GitHub Pages. Optionally point `www` to `shivaenggworks.com` with a
+`CNAME` record. Keep existing mail-related `MX` and `TXT` records unchanged.
+After DNS propagates and GitHub finishes its DNS check, enable **Enforce HTTPS**
+in the repository's Pages settings.
