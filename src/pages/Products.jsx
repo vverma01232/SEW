@@ -1,11 +1,12 @@
 import { useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Search } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import ProductModal from '../components/ProductModal';
 import { Reveal, SectionTag } from '../components/ui-bits';
 import { CATEGORIES, PRODUCTS } from '../data/products';
+import { assetUrl } from '../data/site';
 
 export default function Products() {
   const [params, setParams] = useSearchParams();
@@ -83,15 +84,15 @@ export default function Products() {
                 <p className="font-mono text-[10px] leading-relaxed tracking-widest2 text-zinc-500">
                   CAN'T FIND WHAT YOU NEED? SEW MANUFACTURES CUSTOM PRODUCTS.
                 </p>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   data-testid="catalog-custom-rfq"
                   className="mt-4 inline-block bg-ink px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-white transition-colors hover:bg-sew"
                 >
                   SEND YOUR REQUIREMENT
-                </a>
+                </Link>
                 <a
-                  href="/assets/SEW-Brochure.pdf"
+                  href={assetUrl('assets/SEW-Brochure.pdf')}
                   download="SEW-Brochure-Shiva-Engineering-Works.pdf"
                   data-testid="download-brochure-btn"
                   className="mt-3 flex items-center justify-center gap-2 border border-ink px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-ink transition-colors hover:border-sew hover:text-sew"

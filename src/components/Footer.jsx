@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { INDIA, NAV } from '../data/site';
+import { assetUrl, INDIA, NAV } from '../data/site';
 import { CATEGORIES } from '../data/products';
 
 const Col = ({ title, children }) => (
@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
-              <img src="/logo-bold.png" alt="SEW logo" className="h-11 w-auto" />
+              <img src={assetUrl('logo-bold.png')} alt="SEW logo" className="h-11 w-auto" />
               <div className="leading-tight">
                 <p className="font-display text-sm text-white">SHIVA ENGINEERING WORKS</p>
                 <p className="mt-1 font-mono text-[9px] tracking-widest2 text-zinc-500">
@@ -38,7 +38,7 @@ export default function Footer() {
               ISO 9001:2008 CERTIFIED
             </p>
             <a
-              href="/assets/SEW-Brochure.pdf"
+              href={assetUrl('assets/SEW-Brochure.pdf')}
               download="SEW-Brochure-Shiva-Engineering-Works.pdf"
               data-testid="footer-download-brochure"
               className="mt-4 inline-flex items-center gap-2 border border-line px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-zinc-400 transition-all hover:border-sew hover:text-sew"

@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { EASE, Magnetic } from '../components/ui-bits';
-import { INDIA } from '../data/site';
+import { assetUrl, INDIA } from '../data/site';
 
 const BG = 'https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?q=80&w=1920&auto=format&fit=crop';
 
@@ -58,7 +58,7 @@ export default function Hero() {
           className="mb-8"
           data-testid="hero-logo-chip"
         >
-        <img src="/logo-bold.png" alt="SEW — Shiva Engineering Works" className="h-[70px] w-auto sm:h-[85px]" />
+        <img src={assetUrl('logo-bold.png')} alt="SEW — Shiva Engineering Works" className="h-[70px] w-auto sm:h-[85px]" />
         </motion.div>
 
         <motion.div

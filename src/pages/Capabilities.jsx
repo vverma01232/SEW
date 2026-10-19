@@ -1,6 +1,6 @@
-import { Reveal, SectionTag, CornerTicks } from '../components/ui-bits';
+import { EASE, Reveal, SectionTag, CornerTicks } from '../components/ui-bits';
 import { motion } from 'framer-motion';
-import { EASE } from '../components/ui-bits';
+import { assetUrl } from '../data/site';
 
 const STEPS = [
   { t: 'MANUFACTURE', d: 'Production & distribution of a diverse range of oilfield equipment and industrial products — flanges, crosses and tees, spools, hammer unions, manifolds, swivel joints and ring joint gaskets.' },
@@ -11,7 +11,7 @@ const STEPS = [
 ];
 
 const MACHINERY_IMG = 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop';
-const WAREHOUSE_IMG = '/assets/gallery/gal-01.jpg';
+const WAREHOUSE_IMG = assetUrl('assets/gallery/gal-01.jpg');
 const PIPES_IMG = 'https://images.unsplash.com/photo-1535813547-99c456a41d4a?q=80&w=1600&auto=format&fit=crop';
 
 function Frame({ src, alt, caption, delay = 0, className = '' }) {

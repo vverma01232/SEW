@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Check, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { Reveal, SectionTag, Magnetic } from '../components/ui-bits';
-import { INDIA } from '../data/site';
+import { assetUrl, INDIA } from '../data/site';
 
 const FIELDS = [
   { name: 'name', label: 'NAME', required: true },
@@ -192,7 +192,7 @@ export default function Contact() {
                     ISO 9001:2008 CERTIFIED
                   </p>
                   <a
-                    href="/assets/SEW-Brochure.pdf"
+                    href={assetUrl('assets/SEW-Brochure.pdf')}
                     download="SEW-Brochure-Shiva-Engineering-Works.pdf"
                     data-testid="contact-download-brochure"
                     className="mt-4 inline-flex items-center gap-2 border border-line px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-zinc-400 transition-all hover:border-sew hover:text-sew"

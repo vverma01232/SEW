@@ -61,7 +61,7 @@ export const PRODUCTS = [
     name: 'Swivel Joints',
     cat: 'oilfield-equipment',
     tagline: 'Short sweep & long sweep, built to turn',
-    desc: 'SEW manufactures a complete range of Swivel Joints, both Short Sweep & Long Sweep, available in both Standard & SOUR service.',
+    desc: 'SEW manufactures a complete range of Short Sweep & Long Sweep Swivel Joints, with working pressure up to 15,000 PSI CWP. Available in both Standard & SOUR service.',
     rows: [
       { k: 'Types', v: 'Short Sweep / Long Sweep' },
       { k: 'Pressure', v: 'Up to 15,000 PSI CWP' },
@@ -75,7 +75,7 @@ export const PRODUCTS = [
     name: 'Plug Valves',
     cat: 'valves-manifolds',
     tagline: 'Low torque control, high pressure ready',
-    desc: 'SEW manufactures high quality Low Torque Plug Valves with different bores, available in both Standard & SOUR service.',
+    desc: 'SEW manufactures high-quality Low Torque Plug Valves in 2" x 1", 2" x 2" and 3" x 3" bore sizes, with working pressure up to 15,000 PSI CWP. Available in both Standard & SOUR service.',
     rows: [
       { k: 'Sizes', v: '2" x 1" / 2" x 2" / 3" x 3"' },
       { k: 'Pressure', v: 'Up to 15,000 PSI CWP' },
@@ -282,7 +282,7 @@ export const PRODUCTS = [
   },
 ];
 
-PRODUCTS.forEach((p) => { p.image = `/assets/products/${p.slug}.jpg`; });
+PRODUCTS.forEach((p) => { p.image = `${process.env.PUBLIC_URL}/assets/products/${p.slug}.jpg`; });
 
 export const getProduct = (slug) => PRODUCTS.find((p) => p.slug === slug);
 

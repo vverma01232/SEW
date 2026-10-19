@@ -25,7 +25,7 @@ class ErrorBoundary extends Component {
             <p className="font-mono text-[11px] tracking-widest2 text-sew">SYSTEM FAULT</p>
             <h1 className="mt-4 font-display text-2xl text-white">Something went wrong.</h1>
             <button
-              onClick={() => window.location.assign('/')}
+              onClick={() => window.location.assign(`${process.env.PUBLIC_URL}/`)}
               className="mt-8 bg-sew px-6 py-3 font-mono text-[11px] tracking-widest2 text-white"
               data-testid="error-reload-btn"
             >
@@ -42,7 +42,7 @@ class ErrorBoundary extends Component {
 export default function App() {
   return (
     <ErrorBoundary>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />

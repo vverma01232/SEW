@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { NAV } from '../data/site';
+import { assetUrl, NAV } from '../data/site';
 import { EASE } from './ui-bits';
 
 function LogoChip({ onClick }) {
   return (
     <Link to="/" onClick={onClick} data-testid="nav-logo" className="flex items-center gap-3">
-      <img src="/logo-bold.png" alt="SEW logo" className="h-9 w-auto sm:h-10" />
+      <img src={assetUrl('logo-bold.png')} alt="SEW logo" className="h-9 w-auto sm:h-10" />
       <span className="hidden flex-col leading-none md:flex">
         <span className="font-display text-[13px] tracking-wide text-white">SHIVA ENGINEERING WORKS</span>
         <span className="mt-1 font-mono text-[9px] tracking-widest2 text-zinc-500">OIL FIELD EQUIPMENT</span>

@@ -7,6 +7,9 @@ export const NAV = [
   { label: 'CONTACT', path: '/contact' },
 ];
 
+export const assetUrl = (path) =>
+  `${process.env.PUBLIC_URL || ''}/${path.replace(/^\/+/, '')}`;
+
 export const INDIA = {
   company: 'Shiva Engineering Works',
   lines: ['Plot No. 65, Sector-24', 'Faridabad, Haryana', 'PIN: 121005, India'],
