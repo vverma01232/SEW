@@ -13,8 +13,8 @@ export const assetUrl = (path) =>
 export const INDIA = {
   company: 'Shiva Engineering Works',
   lines: ['Plot No. 65, Sector-24', 'Faridabad, Haryana', 'PIN: 121005, India'],
-  website: 'www.shivaenggworks.com',
-  url: 'https://www.shivaenggworks.com',
+  website: 'shivaenggworks.com',
+  url: 'https://shivaenggworks.com',
   email: 'sales@shivaenggworks.com',
   phone: '+91-9911-700-180',
   phoneHref: 'tel:+919911700180',
