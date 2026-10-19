@@ -33,6 +33,8 @@ jobs:
         run: corepack yarn install --frozen-lockfile --non-interactive
 
       - name: Build site
+        env:
+          PUBLIC_URL: .
         run: |
           npm run build
           cp build/index.html build/404.html

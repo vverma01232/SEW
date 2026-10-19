@@ -1,3 +1,5 @@
+import { assetUrl } from './site';
+
 export const CATEGORIES = [
   { slug: 'all', label: 'ALL PRODUCTS' },
   { slug: 'oilfield-equipment', label: 'OILFIELD EQUIPMENT' },
@@ -282,7 +284,7 @@ export const PRODUCTS = [
   },
 ];
 
-PRODUCTS.forEach((p) => { p.image = `${process.env.PUBLIC_URL}/assets/products/${p.slug}.jpg`; });
+PRODUCTS.forEach((p) => { p.image = assetUrl(`assets/products/${p.slug}.jpg`); });
 
 export const getProduct = (slug) => PRODUCTS.find((p) => p.slug === slug);
 

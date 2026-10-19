@@ -8,6 +8,7 @@ import ProductDetail from './pages/ProductDetail';
 import Capabilities from './pages/Capabilities';
 import CustomDevelopment from './pages/CustomDevelopment';
 import Contact from './pages/Contact';
+import { APP_BASENAME } from './data/site';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class ErrorBoundary extends Component {
             <p className="font-mono text-[11px] tracking-widest2 text-sew">SYSTEM FAULT</p>
             <h1 className="mt-4 font-display text-2xl text-white">Something went wrong.</h1>
             <button
-              onClick={() => window.location.assign(`${process.env.PUBLIC_URL}/`)}
+              onClick={() => window.location.assign(`${APP_BASENAME}/`)}
               className="mt-8 bg-sew px-6 py-3 font-mono text-[11px] tracking-widest2 text-white"
               data-testid="error-reload-btn"
             >
@@ -42,7 +43,7 @@ class ErrorBoundary extends Component {
 export default function App() {
   return (
     <ErrorBoundary>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={APP_BASENAME}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />

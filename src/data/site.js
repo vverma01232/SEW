@@ -7,8 +7,15 @@ export const NAV = [
   { label: 'CONTACT', path: '/contact' },
 ];
 
+export const APP_BASENAME =
+  process.env.PUBLIC_URL === '.'
+    ? window.location.hostname === 'vverma01232.github.io'
+      ? '/SEW'
+      : ''
+    : process.env.PUBLIC_URL || '';
+
 export const assetUrl = (path) =>
-  `${process.env.PUBLIC_URL || ''}/${path.replace(/^\/+/, '')}`;
+  `${APP_BASENAME}/${path.replace(/^\/+/, '')}`;
 
 export const INDIA = {
   company: 'Shiva Engineering Works',
