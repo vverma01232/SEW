@@ -2,7 +2,6 @@ export const NAV = [
   { label: 'HOME', path: '/' },
   { label: 'ABOUT', path: '/about' },
   { label: 'PRODUCTS', path: '/products' },
-  { label: 'CAPABILITIES', path: '/capabilities' },
   { label: 'CUSTOM DEVELOPMENT', path: '/custom-product-development' },
   { label: 'CONTACT', path: '/contact' },
 ];

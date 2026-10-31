@@ -104,7 +104,7 @@ export function CursorGlow() {
       style={{
         left: p.x - 210,
         top: p.y - 210,
-        background: 'radial-gradient(circle, rgba(229,35,33,0.055) 0%, transparent 62%)',
+        background: 'radial-gradient(circle, rgba(227,0,15,0.055) 0%, transparent 62%)',
       }}
     />
   );

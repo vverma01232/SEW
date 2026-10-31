@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { EASE, Magnetic } from '../components/ui-bits';
-import { assetUrl, INDIA } from '../data/site';
+import { assetUrl } from '../data/site';
 
 const BG = 'https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?q=80&w=1920&auto=format&fit=crop';
 
@@ -23,6 +23,7 @@ function MaskedLine({ children, delay }) {
 
 export default function Hero() {
   const ref = useRef(null);
+  const metaPosition = { top: 'calc(5.5rem + var(--site-announcement-height, 0px))' };
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '22%']);
   const fade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
@@ -43,10 +44,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-x-0 h-px animate-scan bg-gradient-to-r from-transparent via-sew/70 to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-1/4 hidden w-px bg-white/5 lg:block" />
 
-      <span className="absolute left-4 top-24 hidden font-mono text-[9px] tracking-widest2 text-zinc-500 sm:block lg:left-12">
-        {INDIA.coords} — FARIDABAD
-      </span>
-      <span className="absolute right-4 top-24 hidden text-right font-mono text-[9px] tracking-widest2 text-zinc-500 sm:block lg:right-12">
+      <span style={metaPosition} className="absolute right-4 hidden text-right font-mono text-[9px] tracking-widest2 text-zinc-500 sm:block lg:right-12">
         ISO 9001:2008 CERTIFIED
       </span>
 

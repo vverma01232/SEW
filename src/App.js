@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
-import Capabilities from './pages/Capabilities';
 import CustomDevelopment from './pages/CustomDevelopment';
 import Contact from './pages/Contact';
 import { APP_BASENAME } from './data/site';
@@ -50,7 +49,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:slug" element={<ProductDetail />} />
-            <Route path="/capabilities" element={<Capabilities />} />
+            <Route path="/capabilities" element={<Navigate to="/" replace />} />
             <Route path="/custom-product-development" element={<CustomDevelopment />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/" replace />} />

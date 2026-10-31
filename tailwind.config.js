@@ -20,7 +20,7 @@ module.exports = {
         steel: '#2D333C',
         line: 'rgba(255,255,255,0.08)',
         linelight: 'rgba(11,12,14,0.10)',
-        sew: { DEFAULT: '#E52321', dark: '#C81B19' },
+        sew: { DEFAULT: '#E3000F', dark: '#C9000D' },
         mist: '#F2F2F0',
         fog: '#E7E7E4'
       },

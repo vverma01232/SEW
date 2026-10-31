@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import AboutBlocks from '../sections/AboutBlocks';
 import StatsBand from '../sections/StatsBand';
 import GlobalPresence from '../sections/GlobalPresence';
@@ -92,15 +91,6 @@ export default function About() {
               ))}
             </div>
           </div>
-          <Reveal delay={0.1} className="mt-16">
-            <Link
-              to="/capabilities"
-              data-testid="about-capabilities-link"
-              className="inline-flex items-center gap-2 border border-white/30 px-8 py-4 font-mono text-[11px] tracking-widest2 text-white transition-all hover:border-sew hover:text-sew"
-            >
-              INSIDE SEW — CAPABILITIES
-            </Link>
-          </Reveal>
         </div>
       </section>
 

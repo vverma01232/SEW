@@ -26,7 +26,7 @@ body {
 }
 
 ::selection {
-    background: #E52321;
+    background: #E3000F;
     color: #fff;
 }
 
@@ -42,7 +42,7 @@ body {
     border: 2px solid #0B0C0E;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #E52321;
+    background: #E3000F;
 }
 
 @layer utilities {

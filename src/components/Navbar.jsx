@@ -16,7 +16,7 @@ function LogoChip({ onClick }) {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ announcementActive = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
@@ -45,7 +45,9 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-[65] transition-all duration-500 ${
+        className={`fixed inset-x-0 z-[65] transition-all duration-500 ${
+          announcementActive ? 'top-10' : 'top-0'
+        } ${
           scrolled ? 'border-b border-line bg-ink/90 backdrop-blur-md' : 'bg-transparent'
         }`}
         data-testid="site-navbar"
