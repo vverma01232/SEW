@@ -12,7 +12,7 @@ export default function ProductCard({ product, onOpen, index = 0 }) {
       initial={{ opacity: 0, scale: 0.96, y: 16 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.2 } }}
-      className="group relative flex h-full flex-col border border-line bg-card"
+      className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-white/5 bg-card"
       data-testid={`product-card-${product.slug}`}
     >
       <div className="relative overflow-hidden bg-mist">
