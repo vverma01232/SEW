@@ -59,7 +59,7 @@ export default function Products() {
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="SEARCH PRODUCTS"
                   data-testid="product-search-input"
-                  className="w-full border border-linelight bg-mist py-3.5 pl-11 pr-4 font-mono text-[11px] tracking-widest2 text-ink outline-none transition-colors placeholder:text-zinc-400 focus:border-sew"
+                  className="w-full rounded-lg border border-linelight bg-mist py-3.5 pl-11 pr-4 font-mono text-[11px] tracking-widest2 text-ink outline-none transition-colors placeholder:text-zinc-400 focus:border-sew"
                 />
               </div>
               <nav className="mt-6 hidden border-t border-linelight lg:block" data-testid="category-nav">
