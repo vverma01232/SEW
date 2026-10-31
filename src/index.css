@@ -6,6 +6,12 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 html.lenis, html.lenis body {
@@ -28,21 +34,6 @@ body {
 ::selection {
     background: #E3000F;
     color: #fff;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #0B0C0E;
-}
-::-webkit-scrollbar-thumb {
-    background: #2D333C;
-    border: 2px solid #0B0C0E;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #E3000F;
 }
 
 @layer utilities {
