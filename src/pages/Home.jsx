@@ -38,7 +38,7 @@ function AboutTeaser() {
             </Link>
           </Reveal>
         </div>
-        <div className="mt-14 border-t border-l linelight border-r">
+        <div className="mt-14">
           <AboutBlocks />
         </div>
       </div>
@@ -63,7 +63,7 @@ function FeaturedProducts({ onOpen }) {
             <Link
               to="/products"
               data-testid="home-view-all-products"
-              className="group inline-flex items-center gap-2 bg-ink px-6 py-3.5 font-mono text-[11px] tracking-widest2 text-white transition-colors hover:bg-sew"
+              className="group inline-flex items-center gap-2 rounded-lg bg-ink px-6 py-3.5 font-mono text-[11px] tracking-widest2 text-white transition-colors hover:bg-sew"
             >
               VIEW FULL CATALOG
               <ArrowUpRight size={13} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -98,7 +98,7 @@ function CustomDevTeaser() {
             <Link
               to="/custom-product-development"
               data-testid="home-custom-dev-link"
-              className="inline-flex items-center gap-2 bg-sew px-6 py-3.5 font-mono text-[11px] tracking-widest2 text-white transition-colors hover:bg-sew-dark"
+              className="inline-flex items-center gap-2 rounded-lg bg-sew px-6 py-3.5 font-mono text-[11px] tracking-widest2 text-white transition-colors hover:bg-sew-dark"
             >
               START YOUR PROJECT
               <ArrowUpRight size={13} />
@@ -136,7 +136,7 @@ function CTABand() {
           <Link
             to="/contact"
             data-testid="home-cta-quote-btn"
-            className="inline-flex items-center gap-3 bg-sew px-10 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
+            className="inline-flex items-center gap-3 rounded-lg bg-sew px-10 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
           >
             REQUEST A QUOTE <span className="h-1.5 w-1.5 rotate-45 bg-white" />
           </Link>

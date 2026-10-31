@@ -80,14 +80,14 @@ export default function Products() {
                   </button>
                 ))}
               </nav>
-              <div className="mt-6 border border-linelight bg-mist p-5">
+              <div className="mt-6 rounded-xl border border-linelight bg-mist p-5">
                 <p className="font-mono text-[10px] leading-relaxed tracking-widest2 text-zinc-500">
                   CAN'T FIND WHAT YOU NEED? SEW MANUFACTURES CUSTOM PRODUCTS.
                 </p>
                 <Link
                   to="/contact"
                   data-testid="catalog-custom-rfq"
-                  className="mt-4 inline-block bg-ink px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-white transition-colors hover:bg-sew"
+                  className="mt-4 inline-block rounded-lg bg-ink px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-white transition-colors hover:bg-sew"
                 >
                   SEND YOUR REQUIREMENT
                 </Link>
@@ -95,7 +95,7 @@ export default function Products() {
                   href={assetUrl('assets/SEW-Brochure.pdf')}
                   download="SEW-Brochure-Shiva-Engineering-Works.pdf"
                   data-testid="download-brochure-btn"
-                  className="mt-3 flex items-center justify-center gap-2 border border-ink px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-ink transition-colors hover:border-sew hover:text-sew"
+                  className="mt-3 flex items-center justify-center gap-2 rounded-lg border border-ink px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-ink transition-colors hover:border-sew hover:text-sew"
                 >
                   DOWNLOAD BROCHURE (PDF)
                 </a>
@@ -125,7 +125,7 @@ export default function Products() {
               </p>
 
               {filtered.length === 0 ? (
-                <div className="mt-10 border border-dashed border-linelight p-16 text-center">
+                <div className="mt-10 rounded-xl border border-dashed border-linelight p-16 text-center">
                   <p className="font-display text-lg text-ink">NO PRODUCTS MATCH YOUR SEARCH</p>
                   <p className="mt-2 text-sm text-zinc-500">Try a different term or clear the filters.</p>
                 </div>

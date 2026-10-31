@@ -25,14 +25,12 @@ const BLOCKS = [
 
 export default function AboutBlocks() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2" data-testid="about-blocks">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2" data-testid="about-blocks">
       {BLOCKS.map((b, i) => (
         <Reveal
           key={b.code}
           delay={i * 0.07}
-          className={`group relative border-linelight border-b border-r p-8 min-[600px]:p-10 lg:p-12 ${
-            i < 2 ? 'md:border-t' : ''
-          } ${i % 2 === 0 ? 'md:border-l' : ''} ${i === 0 ? 'md:border-t-0' : ''}`}
+          className="group relative overflow-hidden rounded-xl border border-linelight bg-white p-8 min-[600px]:p-10 lg:p-12"
         >
           <span className="absolute left-0 top-0 h-0 w-0.5 bg-sew transition-all duration-500 group-hover:h-full" />
           <span className="font-mono text-[11px] tracking-widest2 text-sew">{b.code}</span>

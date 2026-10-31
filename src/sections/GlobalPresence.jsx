@@ -22,8 +22,8 @@ export default function GlobalPresence() {
         </div>
 
         <Reveal className="mt-14">
-          <div className="relative grid border border-linelight bg-white lg:grid-cols-2" data-testid="presence-in">
-            <div className="relative p-8 lg:p-12">
+          <div className="relative grid gap-3 rounded-xl bg-mist p-3 lg:grid-cols-2" data-testid="presence-in">
+            <div className="relative overflow-hidden rounded-lg bg-white p-8 lg:p-12">
               <span className="absolute left-0 top-0 h-0.5 w-full bg-sew" />
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -46,7 +46,7 @@ export default function GlobalPresence() {
               </div>
             </div>
 
-            <div className="relative min-h-[340px] overflow-hidden border-t border-linelight lg:border-l lg:border-t-0">
+            <div className="relative min-h-[340px] overflow-hidden rounded-lg border border-linelight">
               <iframe
                 title="Shiva Engineering Works on Google Maps"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112341.90030617453!2d77.22174228276346!3d28.368390177136693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdc0314edf467%3A0x5535642b58ddf18b!2sShiva%20Engineering%20Works!5e0!3m2!1sen!2sin!4v1791021294098!5m2!1sen!2sin"

@@ -14,7 +14,7 @@ export default function Pipeline({ light = false }) {
   return (
     <div className="relative" data-testid="engineering-pipeline">
       <div className="absolute left-[22px] top-0 h-full w-px bg-gradient-to-b from-sew via-line to-transparent lg:left-0 lg:top-[13px] lg:h-px lg:w-full lg:bg-gradient-to-r" />
-      <div className="grid gap-10 lg:grid-cols-6 lg:gap-4">
+      <div className="grid gap-3 lg:grid-cols-6">
         {STEPS.map((s, i) => (
           <motion.div
             key={s.n}
@@ -22,12 +22,14 @@ export default function Pipeline({ light = false }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: i * 0.12, ease: EASE }}
-            className="relative flex gap-6 pl-0 lg:block"
+            className={`relative flex gap-4 rounded-xl border p-5 lg:flex-col lg:gap-0 ${
+              light ? 'border-linelight bg-white' : 'border-line bg-card'
+            }`}
           >
-            <span className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center border border-sew bg-ink font-mono text-[11px] font-semibold text-sew">
+            <span className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-sew bg-ink font-mono text-[11px] font-semibold text-sew">
               {s.n}
             </span>
-            <div className="lg:mt-6">
+            <div className="lg:mt-5">
               <h4 className={`font-display text-sm tracking-wide ${light ? 'text-ink' : 'text-white'}`}>{s.t}</h4>
               <p className={`mt-2 text-xs leading-relaxed ${light ? 'text-zinc-600' : 'text-zinc-400'}`}>{s.d}</p>
             </div>

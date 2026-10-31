@@ -111,7 +111,7 @@ export default function Hero() {
             <Link
               to="/products"
               data-testid="hero-btn-explore-products"
-              className="inline-flex items-center gap-3 bg-sew px-8 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors duration-300 hover:bg-sew-dark"
+              className="inline-flex items-center gap-3 rounded-lg bg-sew px-8 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors duration-300 hover:bg-sew-dark"
             >
               EXPLORE PRODUCTS
               <span className="h-1.5 w-1.5 rotate-45 bg-white" />
@@ -121,7 +121,7 @@ export default function Hero() {
             <Link
               to="/contact"
               data-testid="hero-btn-request-quote"
-              className="inline-flex items-center gap-3 border border-white/30 px-8 py-4 font-mono text-[11px] tracking-widest2 text-white transition-all duration-300 hover:border-sew hover:text-sew"
+              className="inline-flex items-center gap-3 rounded-lg border border-white/30 px-8 py-4 font-mono text-[11px] tracking-widest2 text-white transition-all duration-300 hover:border-sew hover:text-sew"
             >
               REQUEST A QUOTE
             </Link>

@@ -13,7 +13,7 @@ const FIELDS = [
 
 function OfficeCard({ office, code }) {
   return (
-    <div className="border border-line bg-card p-7" data-testid={`contact-office-${code}`}>
+    <div className="relative overflow-hidden rounded-xl border border-line bg-card p-7" data-testid={`contact-office-${code}`}>
       <span className="absolute left-0 top-0 h-0.5 w-full bg-sew" />
       <p className="font-mono text-[10px] tracking-widest2 text-sew">INDIA — HEAD OFFICE</p>
       <h3 className="mt-3 font-display text-base tracking-wide text-white">{office.company.toUpperCase()}</h3>
@@ -60,7 +60,7 @@ export default function Contact() {
     setState('sent');
   };
 
-  const inputCls = 'w-full border border-line bg-coal px-4 py-3.5 font-mono text-[12px] tracking-wider text-white outline-none transition-colors placeholder:text-zinc-600 focus:border-sew';
+  const inputCls = 'w-full rounded-lg border border-line bg-coal px-4 py-3.5 font-mono text-[12px] tracking-wider text-white outline-none transition-colors placeholder:text-zinc-600 focus:border-sew';
 
   return (
     <>
@@ -86,7 +86,7 @@ export default function Contact() {
           <div className="grid gap-12 lg:grid-cols-[1fr_420px]">
             <Reveal>
               {state === 'sent' ? (
-                <div className="flex h-full min-h-[420px] flex-col items-start justify-center border border-sew/40 bg-mist p-10" data-testid="quote-success-panel">
+                <div className="flex h-full min-h-[420px] flex-col items-start justify-center rounded-xl border border-sew/40 bg-mist p-10" data-testid="quote-success-panel">
                   <span className="flex h-14 w-14 items-center justify-center bg-sew text-white"><Check size={26} /></span>
                   <h2 className="mt-6 font-display text-2xl tracking-tight text-ink sm:text-3xl">REQUEST READY.</h2>
                   <p className="mt-3 max-w-md text-sm leading-relaxed text-zinc-600">
@@ -99,14 +99,14 @@ export default function Contact() {
                       target="_blank"
                       rel="noreferrer"
                       data-testid="quote-whatsapp-notify"
-                      className="inline-flex items-center gap-2 bg-[#1FA855] px-6 py-3.5 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-opacity hover:opacity-90"
+                      className="inline-flex items-center gap-2 rounded-lg bg-[#1FA855] px-6 py-3.5 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-opacity hover:opacity-90"
                     >
                       SEND VIA WHATSAPP
                     </a>
                     <a
                       href={mailUrl}
                       data-testid="quote-email-notify"
-                      className="inline-flex items-center gap-2 bg-ink px-6 py-3.5 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew"
+                      className="inline-flex items-center gap-2 rounded-lg bg-ink px-6 py-3.5 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew"
                     >
                       SEND VIA EMAIL
                     </a>
@@ -120,7 +120,7 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={submit} data-testid="quote-form" className="border border-linelight bg-white p-6 sm:p-10">
+                <form onSubmit={submit} data-testid="quote-form" className="rounded-xl border border-linelight bg-white p-6 sm:p-10">
                   <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                     {FIELDS.map((f) => (
                       <div key={f.name}>
@@ -168,7 +168,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       data-testid="contact-form-submit-btn"
-                      className="inline-flex items-center gap-3 bg-sew px-10 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
+                      className="inline-flex items-center gap-3 rounded-lg bg-sew px-10 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
                     >
                       REQUEST A QUOTE <Send size={14} />
                     </button>
@@ -180,7 +180,7 @@ export default function Contact() {
             <div className="space-y-6">
               <Reveal delay={0.1}><OfficeCard office={INDIA} code="in" /></Reveal>
               <Reveal delay={0.18}>
-                <div className="border border-line bg-ink p-7">
+                <div className="rounded-xl border border-line bg-ink p-7">
                   <p className="font-mono text-[10px] tracking-widest2 text-sew">DIRECT LINE</p>
                   <p className="mt-3 text-[13px] leading-relaxed text-zinc-400">
                     Prefer to talk? Call the India office directly —
@@ -195,7 +195,7 @@ export default function Contact() {
                     href={assetUrl('assets/SEW-Brochure.pdf')}
                     download="SEW-Brochure-Shiva-Engineering-Works.pdf"
                     data-testid="contact-download-brochure"
-                    className="mt-4 inline-flex items-center gap-2 border border-line px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-zinc-400 transition-all hover:border-sew hover:text-sew"
+                    className="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-zinc-400 transition-all hover:border-sew hover:text-sew"
                   >
                     DOWNLOAD BROCHURE (PDF)
                   </a>

@@ -15,7 +15,7 @@ export default function ProductDetail() {
       <section className="flex min-h-[70vh] items-center justify-center bg-ink pt-24">
         <div className="text-center">
           <h1 className="font-display text-3xl text-white">PRODUCT NOT FOUND</h1>
-          <Link to="/products" data-testid="product-not-found-back" className="mt-6 inline-block bg-sew px-6 py-3 font-mono text-[11px] tracking-widest2 text-white">
+          <Link to="/products" data-testid="product-not-found-back" className="mt-6 inline-block rounded-lg bg-sew px-6 py-3 font-mono text-[11px] tracking-widest2 text-white">
             BACK TO CATALOG
           </Link>
         </div>
@@ -54,7 +54,7 @@ export default function ProductDetail() {
       <section className="bg-white py-14 lg:py-20" data-testid="product-detail-datasheet">
         <div className="mx-auto max-w-[1600px] px-4 sm:px-8 lg:px-12">
           <Reveal>
-            <div className="border border-linelight shadow-[0_40px_80px_-40px_rgba(11,12,14,0.25)]">
+            <div className="overflow-hidden rounded-xl border border-linelight shadow-[0_40px_80px_-40px_rgba(11,12,14,0.25)]">
               <Datasheet product={product} />
             </div>
           </Reveal>

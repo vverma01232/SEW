@@ -41,7 +41,7 @@ export default function Footer() {
               href={assetUrl('assets/SEW-Brochure.pdf')}
               download="SEW-Brochure-Shiva-Engineering-Works.pdf"
               data-testid="footer-download-brochure"
-              className="mt-4 inline-flex items-center gap-2 border border-line px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-zinc-400 transition-all hover:border-sew hover:text-sew"
+              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-4 py-2.5 font-mono text-[10px] tracking-widest2 text-zinc-400 transition-all hover:border-sew hover:text-sew"
             >
               DOWNLOAD BROCHURE (PDF)
             </a>

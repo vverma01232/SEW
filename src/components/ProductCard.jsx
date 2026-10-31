@@ -30,7 +30,7 @@ export default function ProductCard({ product, onOpen, index = 0 }) {
             className="mx-auto aspect-[4/3] w-full object-contain p-6 transition-transform duration-700 ease-out group-hover:scale-[1.07] sm:p-8"
           />
         </button>
-        <span className="absolute left-3 top-3 bg-ink px-2 py-1 font-mono text-[9px] tracking-widest2 text-white">
+        <span className="absolute left-3 top-3 rounded-md bg-ink px-2 py-1 font-mono text-[9px] tracking-widest2 text-white">
           {categoryLabel(product.cat)}
         </span>
       </div>
@@ -52,7 +52,7 @@ export default function ProductCard({ product, onOpen, index = 0 }) {
           <Link
             to={`/contact?product=${encodeURIComponent(product.name)}`}
             data-testid={`product-quote-btn-${product.slug}`}
-            className="border border-sew px-3 py-1.5 font-mono text-[10px] tracking-widest2 text-sew transition-all duration-300 hover:bg-sew hover:text-white"
+            className="rounded-lg border border-sew px-3 py-1.5 font-mono text-[10px] tracking-widest2 text-sew transition-all duration-300 hover:bg-sew hover:text-white"
           >
             REQUEST QUOTE
           </Link>

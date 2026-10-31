@@ -37,7 +37,7 @@ export function Datasheet({ product }) {
         <Link
           to={`/contact?product=${encodeURIComponent(product.name)}`}
           data-testid="modal-request-quote-btn"
-          className="mt-8 inline-flex items-center gap-2 bg-sew px-6 py-3 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
+          className="mt-8 inline-flex items-center gap-2 rounded-lg bg-sew px-6 py-3 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
         >
           REQUEST A QUOTE <ArrowUpRight size={13} />
         </Link>
@@ -73,7 +73,7 @@ export default function ProductModal({ product, onClose }) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 40, opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="relative max-h-[92vh] w-full max-w-5xl overflow-y-auto border border-line bg-coal"
+            className="relative max-h-[92vh] w-full max-w-5xl overflow-y-auto rounded-t-xl border border-line bg-coal sm:rounded-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button

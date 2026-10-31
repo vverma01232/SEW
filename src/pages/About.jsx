@@ -19,7 +19,7 @@ export default function About() {
         <div className="relative mx-auto max-w-[1600px] px-4 sm:px-8 lg:px-12">
           <SectionTag code="ABOUT" label="THE COMPANY" />
           <Reveal className="mt-8">
-            <h1 className="font-display text-4xl leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-4xl leading-[1.02] tracking-tight text-sew sm:text-6xl lg:text-7xl">
               SHIVA ENGINEERING WORKS
             </h1>
           </Reveal>
@@ -59,7 +59,7 @@ export default function About() {
               transit.
             </p>
           </Reveal>
-          <div className="mt-14 border-t border-l linelight border-r">
+          <div className="mt-14">
             <AboutBlocks />
           </div>
         </div>

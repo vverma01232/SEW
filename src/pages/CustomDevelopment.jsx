@@ -76,7 +76,7 @@ export default function CustomDevelopment() {
                 </p>
               </Reveal>
               <Reveal delay={0.18}>
-                <div className="mt-8 flex items-start gap-4 border border-sew/40 bg-sew/5 p-6" data-testid="confidentiality-note">
+                <div className="mt-8 flex items-start gap-4 rounded-xl border border-sew/40 bg-sew/5 p-6" data-testid="confidentiality-note">
                   <ShieldCheck size={20} className="mt-0.5 shrink-0 text-sew" />
                   <p className="text-[13px] leading-relaxed text-zinc-300">
                     SEW handles all your information with uncompromised confidentiality and security. We
@@ -86,10 +86,10 @@ export default function CustomDevelopment() {
                 </div>
               </Reveal>
             </div>
-            <div className="grid grid-cols-2 border-t border-l border-line sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
               {CAPS.map((c, i) => (
                 <Reveal key={c} delay={i * 0.05}>
-                  <div className="group flex h-full items-end border-b border-r border-line p-6 transition-colors hover:bg-card lg:p-8">
+                  <div className="group flex h-full items-end rounded-xl border border-line p-6 transition-colors hover:bg-card lg:p-8">
                     <div>
                       <span className="font-mono text-[10px] text-sew">{String(i + 1).padStart(2, '0')}</span>
                       <h3 className="mt-3 font-display text-sm tracking-wide text-white sm:text-base">{c}</h3>
@@ -104,7 +104,7 @@ export default function CustomDevelopment() {
             <Link
               to="/contact"
               data-testid="customdev-cta"
-              className="inline-flex items-center gap-3 bg-sew px-10 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
+              className="inline-flex items-center gap-3 rounded-lg bg-sew px-10 py-4 font-mono text-[11px] font-semibold tracking-widest2 text-white transition-colors hover:bg-sew-dark"
             >
               SEND YOUR REQUIREMENT <ArrowUpRight size={14} />
             </Link>

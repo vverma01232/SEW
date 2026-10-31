@@ -82,7 +82,7 @@ export default function Navbar({ announcementActive = false }) {
               to="/contact"
               onClick={navClick('/contact')}
               data-testid="nav-btn-rfq"
-              className="bg-sew px-5 py-2.5 font-mono text-[10.5px] font-semibold tracking-widest2 text-white transition-colors duration-300 hover:bg-sew-dark"
+              className="rounded-lg bg-sew px-5 py-2.5 font-mono text-[10.5px] font-semibold tracking-widest2 text-white transition-colors duration-300 hover:bg-sew-dark"
             >
               REQUEST A QUOTE
             </Link>
@@ -97,7 +97,6 @@ export default function Navbar({ announcementActive = false }) {
             <motion.span animate={open ? { rotate: -45, y: -3.5 } : { rotate: 0, y: 0 }} className="h-px w-6 bg-white" />
           </button>
         </div>
-        {!scrolled && <span className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />}
       </header>
 
       <AnimatePresence>

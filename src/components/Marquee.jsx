@@ -15,7 +15,7 @@ export default function Marquee({ items, dark = true }) {
     <div
       className={`mask-fade-x overflow-hidden border-y py-5 ${
         dark ? 'border-line bg-ink' : 'border-linelight bg-mist'
-      }`}
+      } ${dark ? 'text-white' : 'text-ink'}`}
       data-testid="editorial-marquee"
     >
       <div className="flex w-max animate-marquee">
