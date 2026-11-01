@@ -1,14 +1,14 @@
 export const SITE_EVENTS = [
   {
     name: 'ADIPEC 2026',
-    booth: '5',
+    booth: 'CN56',
     startDate: '2026-11-02',
     endDate: '2026-11-05',
-    timeZone: 'Asia/Kolkata',
+    timeZone: 'Asia/Dubai',
     enabled: true,
     messages: {
       upcoming: 'UPCOMING EVENT / ADIPEC 2026',
-      during: 'MEET US AT BOOTH 5 / ADIPEC 2026',
+      during: 'MEET US AT BOOTH CN56 / ADIPEC 2026',
     },
     details: '2-5 November 2026, Abu Dhabi, UAE',
   },
